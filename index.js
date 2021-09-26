@@ -908,9 +908,9 @@ break
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 				client.groupUpdateSubject(from, `𝐷𝑖𝑛𝑎𝑠𝑡𝑦 愛`)
-				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )
-					
+				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
 				break 
+					
 				case 'instagram':
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
