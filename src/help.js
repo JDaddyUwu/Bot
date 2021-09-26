@@ -1,13 +1,14 @@
 const help = (prefix) => {
 	return `
 
-⌜ *ѕнαηвσт ву ѕнαη∂υу* ⌟  
+⌜ *ѕнαηвσт ву _*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_
+* ⌟  
 
 ◉ *INFORMACION*
    ○ Comando: ⌜ ${prefix} ⌟
-   ○ Creador: ѕнαη∂υу™ 
-   ○ Como instalar el bot: https://www.youtube.com/watch?v=2LQSzEbpJ-M
-   ○ Instagram: https://www.instagram.com/thepavos
+   ○ Creador: Daddy 
+   ○ Grupo Oficial: https://chat.whatsapp.com/IpnLVXb9LVA58gmQVtRAOu
+   ○ Instagram: https://www.instagram.com/dinasty_uwu
 
 ◉ *PARA USAR EL BOT*
 Registrate con el comando ${prefix}daftar y tu nombre
@@ -102,10 +103,10 @@ Para usar estas funciones el bot necesita admin
 Para activar los NSFW coloque el siguiente comando ${prefix}nsfw 1 y para desactivar los NSFW coloque ${prefix}nsfw 0
 
 
-No te olvides de seguirme en instagram flaco ;)
+No te olvides de seguirnos ;)
 
 
-_*by shanduy*_
+_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_
 
 
 ⌜ *ごきげんよう :)* ⌟ 
