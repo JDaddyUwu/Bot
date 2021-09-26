@@ -1942,7 +1942,11 @@ break
 		 if (budy.startsWith(`Ankara`)) {
         const none = fs.readFileSync('./mp3/ankara.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }						
+                  }	
+	         if (budy.startsWith(`La dedea 7u7`)) {
+        const none = fs.readFileSync('./mp3/gemidos.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }							
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
