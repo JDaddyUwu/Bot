@@ -335,7 +335,7 @@ async function starts() {
     			const apakah = ['Si','No']
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
 			const botNumber = client.user.jid
-			const ownerNumber = ["593997889284@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["33637676766@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
@@ -919,11 +919,11 @@ break
 					
 				case 'actualizar':
 				case 'update':
-				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? Tu no eres Daddy')
+				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? No eres Daddy')
 				reply('Espera un momento Daddy... Me estoy actualizando🍒')
 				exec(`bash update.sh`, (err, stdout) => {
 				if (err) return reply(err)
-				if (stdout) reply(`Ya me actualicé Daddy`)
+				if (stdout) reply(`Ya me actualize Daddy`)
 				})
 				break
 					
