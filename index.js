@@ -903,7 +903,7 @@ break
                 }
               await client.sendMessage(from, options, text)
                break			
-			       case 'dinasty:
+			       case 'dinasty':
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
