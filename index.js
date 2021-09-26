@@ -911,13 +911,33 @@ break
 				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
 				break 
 					
-				case 'instagram':
+				case 'noviadedaddy':
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-				client.groupUpdateSubject(from, `https://www.instagram.com/dinasty_uwu`)
+				client.groupUpdateSubject(from, `Novia de Daddy wa.me/50672244442`)
+				break
 					
-			       break
+				case 'actualizar':
+				case 'update':
+				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? Tu no eres Daddy')
+				reply('Espera un momento Daddy... Me estoy actualizando🍒')
+				exec(`bash update.sh`, (err, stdout) => {
+				if (err) return reply(err)
+				if (stdout) reply(`Ya me actualicé Daddy`)
+				})
+				break
+					
+				case 'restaurar':
+				case 'restore':
+				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? No eres Daddy')
+				reply('La información de este bot se borrará y se tendrá que escanear el código qr de nuevo')
+				exec(`bash restore.sh`, (err, stdout) => {
+				if (err) return reply(err)
+				if (stdout) reply(stdout)
+				})
+				break	
+					
                                case 'tts':
 				   client.updatePresence(from, Presence.recording) 
 				   if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?\n\nPara saber el codigo de idioma coloque el comando ${prefix}idioma', text, {quoted: mek})
@@ -1209,6 +1229,7 @@ contextInfo: { mentionedJid: [from] }
 client.sendMessage(from, options, text, { quoted: mek } )
 break
                                       
+                                        
                                         case 'kick':
 					case 'alv':
 					client.updatePresence(from, Presence.composing) 
@@ -1218,19 +1239,20 @@ break
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Pedido recibido, adios puta :\n'
+						teks = 'Pedido recibido, Chao Puta :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
+				        const none = fs.readFileSync('./mp3/baneado.mp3');
                                                 }
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`Pedido recibido, chao puta : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						mentions(`Pedido recibido, chao pa 👋 : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupRemove(from, mentioned)
-					client.sendMessage(mentioned, 'Chao puta gorda', text)         
+					client.sendMessage(mentioned, 'Chao puta gorda', text)
+					const none = fs.readFileSync('./mp3/baneado.mp3');
 					}
 					break
-
 case 'demote':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1273,7 +1295,7 @@ client.groupMakeAdmin(from, mentioned)
 break				
 				
 case 'linkgc':
-case 'dinasty':					
+case 'link':					
 client.updatePresence(from, Presence.composing) 
 if (!isGroup) return reply(mess.only.group)
 if (!isUser) return reply(mess.only.daftarB)
@@ -1516,7 +1538,7 @@ break
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=hamilton50`)
                 if (anu.error) return reply(anu.error)
-                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por shanduy*_`
+                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por 𝐷𝑎𝑑𝑑𝑦*_`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -2059,7 +2081,7 @@ break
         const none = fs.readFileSync('./mp3/mami.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-		if (budy.startsWith(`esta aqui`)) {
+		if (budy.startsWith(`Daddy`)) {
         const none = fs.readFileSync('./mp3/estaaqui.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
