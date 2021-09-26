@@ -1939,8 +1939,8 @@ break
         const none = fs.readFileSync('./mp3/sombare6.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
-		 if (budy.startsWith(`Daddy`)) {
-        const none = fs.readFileSync('./mp3/Todas muern por ti.mp3');
+		 if (budy.startsWith(`Ankara`)) {
+        const none = fs.readFileSync('./mp3/ankara.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }						
 		if (budy.startsWith(`Nefasto`)) {
