@@ -910,11 +910,11 @@ break
 				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
 				break 
 					
-				case 'noviadedaddy':
+				case 'dinamica':
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-				client.groupUpdateSubject(from, `Novia de Daddy wa.me/50672244442`)
+				client.groupUpdateSubject(from, `🍒Dinamica en 1 Hora🍒`)
 				break
 					
 				case 'actualizar':
@@ -1483,7 +1483,7 @@ break
 						break
 					
 					case 'lighttext':
-				if (isLimit(sender)) return reply(ind.limitend(pusname)) 
+				if (!isUser) return reply(mess.only.daftarB)
 	                      if   (!isRegistered) return reply(ind.noregis())				
 				reply(ind.wait())
 				liig = `${body.slice(11)}`
