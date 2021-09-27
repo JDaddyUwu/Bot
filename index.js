@@ -910,11 +910,11 @@ break
 				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
 				break 
 					
-				case 'dinamica':
+				case 'noviadedaddy':
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-				client.groupUpdateSubject(from, `🍒Dinamica en 1 Hora🍒`)
+				client.groupUpdateSubject(from, `Novia de Daddy wa.me/50672244442`)
 				break
 					
 				case 'actualizar':
@@ -1253,7 +1253,16 @@ break
 					}
 					break
 					
-					
+					case 'piropos':
+				client.updatePresence(from, Presence.composing) 
+			if (isLimit(sender)) return reply(ind.limitend(pusname))  
+ if	(!isRegistered) return reply(ind.noregis())				
+								const mary =['Algunos quieren ser ricos a travÃ©s del dinero, otros del poder, pero lo que no saben, es que la Ãºnica riqueza es tu amor verdadero.','SoÃ±ando contigo he tenido una revelaciÃ³n, ahora necesito que me hagas un hueco en tu corazÃ³n.','Aunque por tu corazÃ³n han pasado muchas personas, me gustarÃ­a que me hicieses un huequecito eterno, por pequeÃ±o que sea, por si pasa algo, para que no me olvides jamÃ¡s.','Lo que siento por ti es tan inmenso que, para guardarlo, me harÃ­a falta otro universo.','me he convertido en un capitÃ¡n pirata para asaltar tu corazÃ³n y robarle el amor.','Me preguntaste por quÃ© te amaba y no pude responderte. Hoy entiendo que el amor verdadero es indescriptible, solo se puede sentir.','OjalÃ¡ fuese papel para poder envolverte, bombÃ³n.','AnsÃ­o besarte, abrazarte y no soltarte','A lo mejor mi hogar no es un palacio, pero me gustarÃ­a que tÃº fueses mi princesa.','Te amo demasiado, lo deseo todo contigo, por eso me vuelvo loc@, cuando tÃº no estÃ¡s conmigo.','Â¿De casualidad tienes un mapa contigo? Porque tengo el interÃ©s de navegar por esa linda mirada','Desde que te he visto me he convertido un/a astronauta porque no he bajado de las galaxias','A pesar de que el cielo estÃ¡ lleno de estrellas, tÃº eres la mÃ¡s importante para mi','Si ser guapo fuera pcado, ya estarÃ­as haciendo penitencia','Los que dicen que Disneyland es el lugar mÃ¡s feliz del mundo no han estado junto a tiðŸ¥º','Si ser guapo matara, serÃ­as la bomba atÃ³micaðŸ˜³','Si fuera gato, pasarÃ­a mis nueve vidas contigo','Â¿Y si nos comemos unos tacos y yo te a-taco a besos?']
+					const js = mary[Math.floor(Math.random() * mary.length)]
+					  wew = fs.readFileSync(`./src/5.jpg`)
+					client.sendMessage(from, wew, image, { caption: 'áŽ®áŽ¥á’áŽ§áŽ®áŽ§á•ðŸ‘Œ\n\n'+ js, quoted: mek })
+break
+
 case 'demote':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1481,17 +1490,6 @@ break
 							.save(ran)
 						}
 						break
-					
-					case 'lighttext':
-				if (!isUser) return reply(mess.only.daftarB)
-	                      if   (!isRegistered) return reply(ind.noregis())				
-				reply(ind.wait())
-				liig = `${body.slice(11)}`
-					liig2 = await fetchJson(`https://api.zeks.xyz/api/lithgtext?text=${liig}&apikey=apivinz`)
-					buffer = await getBuffer(liig2.result)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
-					await limitAdd(sender)
-					break
 					
 					case 'attp':
 						if (!isUser) return reply(mess.only.daftarB)
