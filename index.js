@@ -1252,6 +1252,15 @@ break
 					const none = fs.readFileSync('./mp3/baneado.mp3');
 					}
 					break
+					
+					case 'reportarnum':
+        			if (isLimit(sender)) return reply(ind.limitend(pusname))  
+                               if  (!isRegistered) return reply(ind.noregis())				
+				 client.updatePresence(from, Presence.composing) 
+				 client.chatRead (from)		
+					client.blockUser (`${body.slice(13)}@c.us`, "add")
+					client.sendMessage(from, `El nÃºmero: ${body.slice(13)}@c.us ah sido reportado 5 veces`, text)
+					break
 
 case 'demote':
 if (!isGroup) return reply(mess.only.group)
@@ -1362,7 +1371,7 @@ reply('*⌊✅⌉ El cambio de foto de 𝐷𝑖𝑛𝑎𝑠𝑡𝑦 愛 fue exit
 break						
 				
 case 'ngc':
-case 'setname':					
+case 'name':					
       if (!isGroup) return reply(mess.only.group)
       if (!isGroupAdmins) return reply(mess.only.admin)
       if (!isBotGroupAdmins) return reply(mess.only.Badmin)
