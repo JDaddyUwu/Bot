@@ -1482,6 +1482,17 @@ break
 						}
 						break
 					
+					case 'lighttext':
+				if (isLimit(sender)) return reply(ind.limitend(pusname)) 
+	                      if   (!isRegistered) return reply(ind.noregis())				
+				reply(ind.wait())
+				liig = `${body.slice(11)}`
+					liig2 = await fetchJson(`https://api.zeks.xyz/api/lithgtext?text=${liig}&apikey=apivinz`)
+					buffer = await getBuffer(liig2.result)
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
+					await limitAdd(sender)
+					break
+					
 					case 'attp':
 						if (!isUser) return reply(mess.only.daftarB)
 					        if (args.length < 1) return reply(`¿Dónde está el texto?\n*Ejemplo:* ${prefix}attp Daddy`)
