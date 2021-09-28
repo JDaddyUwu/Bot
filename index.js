@@ -1896,14 +1896,14 @@ break
                   }
 		
 		if (budy.includes(`Soy Nuevo`)) {
-                  reply(`Presentate o Ban👺`)
+                  reply(`Al Nuevo Se Lo Culea😋`)
                   }			
 	
 		if (budy.includes(`Soy Nueva`)) {
-                  reply(`Presentate o Ban👺`)
+                  reply(`A La Nueva Se La Culean😋`)
                   }						
 					
-		if (budy.includes(`Sexo`)) {
+		if (budy.includes(`porno`)) {
                   reply(`Shhhh Pajero`)
                   }				
 			
@@ -1917,7 +1917,12 @@ break
 					
 		if (budy.includes(`Daddy`)) {
                   reply(`Hola, soy su Bot, que verga quieres amor?`)
+                  }
+					
+		if (budy.includes(`*noviadedaddy`)) {
+                  reply(`Neptuno es la novia De Daddy, wa.me/50672244442`)
                   }					
+					
 					
 	if (budy.startsWith(`Hora del sexito`)) {
         const none = fs.readFileSync('./mp3/maau1.mp3');
@@ -2116,7 +2121,7 @@ break
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
 		if (budy.startsWith(`Cancion favorita de Daddy`)) {
-        const none = fs.readFileSync('./mp3/fedup.mp3');
+        const none = fs.readFileSync('./mp3/fedup.mp4');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 		if (budy.startsWith(`Mercury`)) {
