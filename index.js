@@ -2104,7 +2104,11 @@ break
 		if (budy.startsWith(`Daddy uwu`)) {
         const none = fs.readFileSync('./mp3/papi.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }	
+                  }
+		if (budy.startsWith(`Yokese`)) {
+        const none = fs.readFileSync('./mp3/audio_yokese.ogg');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }				
 		if (budy.startsWith(`Se fue con otro:(`)) {
         const none = fs.readFileSync('./mp3/porque.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
