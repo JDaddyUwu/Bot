@@ -858,18 +858,7 @@ console.log(e)
 reply('Hubo un error intentalo nuevamente :/')
 }
 break	
-					
-case 'noviadedaddy':
-try{
-if (!isUser) return reply(mess.only.daftarB)
-if (!isGroup) return reply(mess.only.group)
-d = []
-teks = 'novia de Daddy wa.me/50672244442\n\n'
-} catch (e) {
-console.log(e)
-reply('Hubo un error intentalo nuevamente :/')
-}
-break								
+								
 											
 /******JUEGOS DADDY LA PUTA MADRE NO TE OLVIDES******/					
 					
