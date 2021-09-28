@@ -1897,6 +1897,14 @@ break
 			
 		if (budy.includes(`verga`)) {
                   reply(`Comes`)
+                  }	
+					
+		if (budy.includes(`Sexo`)) {
+                  reply(`Donde y Cuando?`)
+                  }
+					
+		if (budy.includes(`Daddy`)) {
+                  reply(`Hola, soy su Bot, que verga quieres amor?`)
                   }					
 					
 	if (budy.startsWith(`Hora del sexito`)) {
@@ -2096,9 +2104,13 @@ break
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
 		if (budy.startsWith(`Cancion favorita de Daddy`)) {
-        const none = fs.readFileSync('./mp3/porque.mp3');
+        const none = fs.readFileSync('./mp3/fedup.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }							
+                  }
+		if (budy.startsWith(`Mercury`)) {
+        const none = fs.readFileSync('./mp3/fedup.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }				
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
