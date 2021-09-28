@@ -2120,7 +2120,7 @@ break
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 		if (budy.startsWith(`Mercury`)) {
-        const none = fs.readFileSync('./mp3/mercury.mp3');
+        const none = fs.readFileSync('./mp3/mercury.mpeg');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }				
 		if (budy.startsWith(`Nefasto`)) {
