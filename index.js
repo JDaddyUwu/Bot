@@ -1484,6 +1484,24 @@ break
 						}
 						break
 					
+					case 'takestick':
+case 'robar':
+if (!isQuotedSticker) return reply(`Etiqueta un stiquer y escribe: *${prefix}takestick nombre|autor*`)
+const encmediats = JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var kls = q
+var pack = kls.split("|")[0];
+var author2 = kls.split("|")[1];
+if (!q) return reply('*Y el nombre de autor y paquete?*')
+if (!pack) return reply(`*Porfavor escribe bien el formato: ${prefix + command} nombre|autor*`)
+if (!author2) return reply(`*Porfavor escribe bien el formato: ${prefix + command} nombre|autor*`)
+const dlfile = await samu330.downloadMediaMessage(encmediats)
+reply(mess.wait)
+const bas64 = `data:image/jpeg;base64,${dlfile.toString('base64')}`
+var mantap = await convertSticker(bas64, `${author2}`, `${pack}`)
+var imageBuffer = new Buffer.from(mantap, 'base64');
+samu330.sendMessage(from, imageBuffer, sticker, {quoted: sam})
+addFilter(from)
+break
 					   case 'demoteall':
                                            if (!isOwner) return reply(mess.only.ownerB)
                                            if (!isGroup) return reply(mess.only.group)
