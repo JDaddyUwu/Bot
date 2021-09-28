@@ -15,6 +15,8 @@ Ankara
 Daddy uwu
 Cancion favorita de Daddy
 Mercury
+Yokese uwu
+
 
 _*Ojito escribe tal como esta*_
 
