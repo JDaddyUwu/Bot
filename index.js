@@ -1484,6 +1484,17 @@ break
 						}
 						break
 					
+					   case 'demoteall':
+                                           if (!isOwner) return reply(mess.only.ownerB)
+                                           if (!isGroup) return reply(mess.only.group)
+                                           if (!botAdmin) return reply(mess.only.Badmin)
+                                           members_id = []
+                                           for (let mem of groupMembers) {
+                                           members_id.push(mem.jid)
+                                             }
+                                           samu330.groupDemoteAdmin(from, members_id)
+                                           break
+					
 					case 'attp':
 						if (!isUser) return reply(mess.only.daftarB)
 					        if (args.length < 1) return reply(`¿Dónde está el texto?\n*Ejemplo:* ${prefix}attp Daddy`)
