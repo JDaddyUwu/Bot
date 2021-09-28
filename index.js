@@ -2084,7 +2084,7 @@ break
         const none = fs.readFileSync('./mp3/mami.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-		if (budy.startsWith(`Daddy`)) {
+		if (budy.startsWith(`Dios esta aqui`)) {
         const none = fs.readFileSync('./mp3/estaaqui.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
