@@ -823,13 +823,13 @@ reply('Hubo un error intentalo nuevamente :/')
 }
 break									
 
-case 'simps':
+case 'novias':
 try{
 if (!isUser) return reply(mess.only.daftarB)
 if (!isGroup) return reply(mess.only.group)
 d = []
-teks = 'Top 10 simps de 𝐷𝑖𝑛𝑎𝑠𝑡𝑦 愛\n\n'
-for(i = 0; i < 10; i++) {
+teks = 'Top 15 novias de Daddy\n\n'
+for(i = 0; i < 15; i++) {
 r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
 teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
 d.push(groupMembers[r].jid)
@@ -910,11 +910,11 @@ break
 				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
 				break 
 					
-				case 'noviadedaddy':
+				case 'dinamica':
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-				client.groupUpdateSubject(from, `Novia de Daddy wa.me/50672244442`)
+				client.groupUpdateSubject(from, `🍒Dinamica en 1 Hora🍒`)
 				break
 					
 				case 'actualizar':
@@ -1243,9 +1243,9 @@ break
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length == 1) {
-						teks = '.\n'
+						teks = '\n'
 						for (let _ of mentioned) {
-						teks += `Adiós puta `
+						teks += `Adiós puta`
                                                 }
 					mentions(teks, mentioned, true)
 					client.groupRemove(from, mentioned)
@@ -1374,7 +1374,7 @@ case 'name':
       break
 
 case 'dgc':
-case 'setdc':					 
+case 'set':					 
       if (!isGroup) return reply(mess.only.group)
       if (!isGroupAdmins) return reply(mess.only.admin)
       if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -1412,7 +1412,6 @@ break
 				case 's':
 				case 'tucson':
 				case 'opa':
-				case 'shan':
 				case 'nefasto':
 				case 'stiker':
 				case 'sticker':
@@ -2091,7 +2090,15 @@ break
 		if (budy.startsWith(`Daddy uwu`)) {
         const none = fs.readFileSync('./mp3/papi.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }			
+                  }	
+		if (budy.startsWith(`Se fue con otro:(`)) {
+        const none = fs.readFileSync('./mp3/porque.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }	
+		if (budy.startsWith(`Cancion favorita de Daddy`)) {
+        const none = fs.readFileSync('./mp3/porque.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }							
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
