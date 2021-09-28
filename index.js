@@ -2117,6 +2117,10 @@ break
         const none = fs.readFileSync('./mp3/fedup.mp4');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
+		if (budy.startsWith(`nam nam:3`)) {
+        const none = fs.readFileSync('./mp3/audio_ñaña.ogg');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }			
 		if (budy.startsWith(`Mercury`)) {
         const none = fs.readFileSync('./mp3/mercury.mpeg');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
