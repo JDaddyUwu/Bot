@@ -2129,7 +2129,11 @@ break
 		if (budy.startsWith(`Mercury`)) {
         const none = fs.readFileSync('./mp3/mercury.mpeg');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }				
+                  }	
+		if (budy.startsWith(`pikachu`)) {
+        const none = fs.readFileSync('./mp3/pikachu.ogg');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }							
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
