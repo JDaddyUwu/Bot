@@ -1498,15 +1498,7 @@ break
 				client.sendMessage(from, buff, image, {quoted: mek})
 				break  
 				
-				
-                                              case 'doxing':
-                                           if (!isRegister) return reply(mess.only.usrReg)
-                                           if (!isGroup) return reply(mess.only.group)
-                                           f = await getJson(`https://docs-jojo.herokuapp.com/api/fake_identity`)
-                                             reply(`*Doxeo de ${mentionUser} echo por Daddy*
-
-	
-				case 'toimg':
+	 			case 'toimg':
 				    client.updatePresence(from, Presence.composing)
                                     if (!isUser) return reply(mess.only.daftarB)
 					if (!isQuotedSticker) return reply('❌ Solo stickers')
