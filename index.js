@@ -1181,7 +1181,7 @@ break
 						reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
-				        
+				       
 			       case 'antilink':
                                         if (!isGroup) return reply(mess.only.group)
 					if (!isUser) return reply(mess.only.daftarB)
