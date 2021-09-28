@@ -857,7 +857,19 @@ mentions(teks, d, true)
 console.log(e)
 reply('Hubo un error intentalo nuevamente :/')
 }
-break											
+break	
+					
+case 'noviadedaddy':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'novia de Daddy wa.me/50672244442\n\n'
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break								
 											
 /******JUEGOS DADDY LA PUTA MADRE NO TE OLVIDES******/					
 					
@@ -1582,7 +1594,7 @@ break
 
 case 'daftar':
 client.updatePresence(from, Presence.composing)
-if (isUser) return reply('Ya estas registrado 🧐')
+if (isUser) return reply('Ya estas registrado')
 if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar 🍒𝘿𝙖𝙙𝙙𝙮🍒`)
 var reg = body.slice(8)
 var nombre = reg.split("|")[0];
@@ -2108,7 +2120,7 @@ break
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 		if (budy.startsWith(`Mercury`)) {
-        const none = fs.readFileSync('./mp3/fedup.mp3');
+        const none = fs.readFileSync('./mp3/mercury.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }				
 		if (budy.startsWith(`Nefasto`)) {
