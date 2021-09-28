@@ -1495,26 +1495,8 @@ break
 					        attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
 						client.sendMessage(from, attp2, MessageType.sticker, {quoted: mek})
 						break
-					case 'neon':
-					if (!isUser) return reply(mess.only.daftarB)
-				        if (!isUser) return reply(mess.only.daftarB)
-                                         if (!isQuotedSticker) return reply('*Y el texto para crear el logo donde esta?*')
-                                        reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${isUser}**`)		
-                                            logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${isUser}`
-                                        sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 Daddy 🔥*', sendEphemeral: true})
-                                          break
 					
-					case 'reglas':
-					reply(`*Hola, estas son las reglas que debes seguir para que no tengas ningun problema con el propietario del bot*\n\n1- _Manten una formalidad respetuosa_\n2- _Si vas a añadir el bot a algun grupo, verifica que el grupo cumpla con los requisitos que son tener minimo 5 personas_\n3- _❌NO HAGAS SPAM DE COMANDOS❌_ *Esto es enserio, puedes hacer que el bot se apage*\n4- _📵NO HAGAS LLAMADAS POR WHATSAPP AL PROPIETARIO DEL BOT📵_ *Seras bloqueado inmediatamente*\n5- _🕐Espera el tiempo nesesario cuando pidas alguna funcion, ya que algunas tardan en realizarse, no vuelvas a pedir el comando nuevamente hasta que te llege un mensaje de error_\n\nLee las reglas y cumplelas, no te quieras hacer el chistoso, por que no lo eres y ni te sale, asi que porfavor respeta las reglas.`)
-					break
-					
-					case 'clima':
-					if (!isUser) return reply('*Y el lugar del que quieres ver el clima?*')
-					clima = `https://api.apiflash.com/v1/urltoimage?access_key=57fcd6384cff4e529b9ca76089f05992&url=https://pt.wttr.in/${q}`
-					sendFileFromUrl(clima, image, {quoted: fimg})
-					break
-
-					
+						
 			          case 'qrcode':
                 buff = await getBuffer(`https://api.qrserver.com/v1/create-qr-code/?data=${body.slice(8)}&size=1080%C3%971080`)
 				client.sendMessage(from, buff, image, {quoted: mek})
