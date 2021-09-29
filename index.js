@@ -46,6 +46,7 @@ const speed = require('performance-now')
 /******FIN DE ENTRADA DEL PAQUETE NPM******/
 
 /******COMIENZO DE LA ENTRADA JSON******/
+const q = args.join(' ')
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const ban = JSON.parse(fs.readFileSync('./database/banned.json'))
@@ -1144,6 +1145,12 @@ break
 					}
 					break
 				
+					case 'neon':
+				if (!q) return reply('*Y el texto para crear el logo donde esta?*')
+				reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+				logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
+				sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘚𝘢𝘮𝘶𝟥𝟥𝟢 🔥*', sendEphemeral: true})
+				break
 				
                                   case 'antitik':
                                         if (!isGroup) return reply(mess.only.group)
