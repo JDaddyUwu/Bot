@@ -927,7 +927,13 @@ break
 				if (stdout) reply(`Ya me actualize Daddy`)
 				})
 				break
-					
+				
+					case 'neon':
+					if (!isUser) return reply('*Y el texto para crear el logo donde esta?*')
+					reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+					logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
+					sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘚𝘢𝘮𝘶𝟥𝟥𝟢 🔥*', sendEphemeral: true})
+					break
 				case 'restaurar':
 				case 'restore':
 				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? No eres Daddy')
