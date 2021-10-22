@@ -7,7 +7,7 @@ const help = (prefix) => {
 ◉ *INFORMACION*
    ○ Comando: ⌜ ${prefix} ⌟
    ○ Creador: Daddy 
-   ○ Grupo Oficial: https://chat.whatsapp.com/IpnLVXb9LVA58gmQVtRAOu
+   ○ Grupo Oficial: https://chat.whatsapp.com/EidwZ4FKsl39ziZB52gjMq
    ○ Instagram: https://www.instagram.com/dinasty_uwu
 
 ◉ *PARA USAR EL BOT*
