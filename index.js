@@ -20,7 +20,7 @@ const {
 } = require('@adiwajshing/baileys')
 
 /******COMIENZO DE LA ENTRADA DEL ARCHIVO******/
-const { ssstik } = require("./lib/tiktok.js")
+const { ssstik } = require('./lib/tiktok')
 const { color, bgcolor } = require('./lib/color')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
