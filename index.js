@@ -809,9 +809,11 @@ reply('Hubo un error intentalo nuevamente :/')
 break	
 					
 case 'top5':
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
 addFilter(from)
-if (!isGroup) return reply('*Este comando solo puede usarse en grupos🤕')
-member = []
+if (!isUser) return reply('*Este comando solo puede usarse en grupos🤕')
+d = []
 top5 = args.join(' ')
 const p1 = groupMembers
 const p2 = groupMembers
@@ -825,12 +827,12 @@ const o4 = p4[Math.floor(Math.random() * p4.length)]
 const o5 = p5[Math.floor(Math.random() * p5.length)]
 teks = `
 *😵TOP CINCO:*\n\n1= @${o1.jid.split('@')[0]}\n\n2=@${o2.jid.split('@')[0]}\n\n3=@${o3.jid.split('@')[0]}\n\n4= @${o4.jid.split('@')[0]}\n\n5= @${o5.jid.split('@')[0]}\n\n\n_Top 5 de_ *${top5}* en este grupo`
-member.push(o1.jid)
-member.push(o2.jid)
-member.push(o3.jid)
-member.push(o4.jid)
-member.push(o5.jid)
-mentions(teks, member, true)
+d.push(o1.jid)
+d.push(o2.jid)
+d.push(o3.jid)
+d.push(o4.jid)
+d.push(o5.jid)
+mentions(teks, d, true)
 break
 					
 case 'simps':
