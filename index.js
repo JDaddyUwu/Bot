@@ -1772,7 +1772,7 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					/*case 'nsfwloli':
+					case 'nsfwloli':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://api.lolis.life/random?nsfw=true`, {method: 'get'})
@@ -1782,7 +1782,7 @@ break
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-						break*/
+						break
 					case 'nsfwbobs': 
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
@@ -1816,8 +1816,10 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					/*case 'nsfwyuri':
-						try {
+					
+
+                                               case 'nsfwyuri':
+ 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://api.computerfreaker.cf/v1/yuri`, {method: 'get'})
 							buffer = await getBuffer(res.result)
@@ -1826,7 +1828,7 @@ break
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-					break*/
+					break
 				case 'nsfwass':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
