@@ -354,7 +354,7 @@ async function starts() {
 			const isAntiWa = isGroup ? antiwa.includes(from) : false
 			const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
-       			const groupAdmins = isGroup ? await wa.getGroupAdmins(groupMembers) : []
+       			const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
