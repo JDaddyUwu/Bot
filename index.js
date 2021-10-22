@@ -755,8 +755,8 @@ break
 
 case 'matrix':
 if (!isUser) return reply('*Y el texto para crear el logo donde esta?*')
-reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${isUser}!*`)	
-logo = `https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${isUser}`
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)	
+logo = `https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${q}`
 sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 Daddy 🔥*', sendEphemeral: true})
 break	
 							
