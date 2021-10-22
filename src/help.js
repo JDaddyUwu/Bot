@@ -26,7 +26,7 @@ Monas chinas
 Interactua con el bot
 
 ◉ *NUEVOS MENUS*
-${bodyM} ${prefix}tiktokstalk @usuario
+○ ${prefix}tiktokstalk @usuario
 ○ ${prefix}juegos
 Diviértete con tus amigos :)
 ○ ${prefix}desmenu
