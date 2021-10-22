@@ -2190,10 +2190,6 @@ break
         const none = fs.readFileSync('./mp3/mercury.mpeg');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-	        if (budy.startsWith(`Bienvenida`)) {
-        const none = fs.readFileSync('./mp3/Bienvenida.ogg);
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }
 		if (budy.startsWith(`pikachu`)) {
         const none = fs.readFileSync('./mp3/audio_pikachu.ogg');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
