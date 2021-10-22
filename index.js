@@ -810,7 +810,6 @@ break
 case 'top5':
 if (!isUser) return reply(mess.only.daftarB)
 if (!isGroup) return reply(mess.only.group)
-addFilter(from)
 if (!isUser) return reply('*Este comando solo puede usarse en grupos🤕')
 d = []
 top5 = args.join(' ')
