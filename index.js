@@ -46,7 +46,7 @@ const speed = require('performance-now')
 /******FIN DE ENTRADA DEL PAQUETE NPM******/
 
 /******COMIENZO DE LA ENTRADA JSON******/
-const ssstik = JSON.parse(fs.readFileSync('./database/json/tiktok.json'))
+const { ssstik } = require("./lib/tiktok.js")
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const ban = JSON.parse(fs.readFileSync('./database/banned.json'))
@@ -504,8 +504,8 @@ if (budy.includes("https://m.facebook.com/")){
 			client.updatePresence(from, Presence.composing)
 			reply("Adios Puta")
 		}, 0)
-	}		
-	
+	}	
+			
 	if (budy.includes("https://vm.tiktok.com/")){
 		if (!isGroup) return
 		if (!isAntiTik) return
