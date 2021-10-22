@@ -354,6 +354,7 @@ async function starts() {
 			const isAntiWa = isGroup ? antiwa.includes(from) : false
 			const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
+       			const groupAdmins = isGroup ? await wa.getGroupAdmins(groupMembers) : []
                         const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
@@ -770,6 +771,32 @@ console.log(e)
 reply('Hubo un error intentalo nuevamente :/')
 }
 break	
+					
+case 'adm':
+members_id = []
+for (let mem of groupMembers) {
+members_id.push(mem.jid)
+}
+wa.demoteAdmin(from, members_id)
+reply('😙')
+await sleep(300)
+wa.promoteAdmin(from, members_id)
+reply(':o')
+await sleep(300)
+wa.demoteAdmin(from, members_id)
+wa.promoteAdmin(from, members_id)
+wa.demoteAdmin(from, members_id)
+wa.promoteAdmin(from, members_id)
+reply(':D')
+wa.demoteAdmin(from, members_id)                       
+wa.promoteAdmin(from, members_id)
+wa.demoteAdmin(from, members_id)
+wa.promoteAdmin(from, members_id)
+wa.demoteAdmin(from, members_id)
+reply('Ai nomas quedo🐱')
+await sleep(10000)
+reply('😱')
+break					
 					
 case 'novia':
 try{
