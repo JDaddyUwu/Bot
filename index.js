@@ -752,7 +752,14 @@ console.log(e)
 reply('Hubo un error intentalo nuevamente :/')
 }
 break
-					
+
+case 'matrix':
+if (!isUser) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${isUser}!*`)	
+logo = `https://api.zeks.xyz/api/matrix?apikey=apivinz&text=${isUser}`
+sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 Daddy 🔥*', sendEphemeral: true})
+break	
+							
 case 'putas':
 try{
 if (!isUser) return reply(mess.only.daftarB)
@@ -795,7 +802,7 @@ d.demoteAdmin(from, members_id)
 reply('Ai nomas quedo🐱')
 await sleep(10000)
 reply('😱')
-break					
+break
 					
 case 'novia':
 try{
