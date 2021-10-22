@@ -772,26 +772,26 @@ reply('Hubo un error intentalo nuevamente :/')
 break	
 					
 case 'adm':
-members_id = []
+d = []
 for (let mem of groupMembers) {
 members_id.push(mem.jid)
 }
-wa.demoteAdmin(from, members_id)
+d.demoteAdmin(from, members_id)
 reply('😙')
 await sleep(300)
-wa.promoteAdmin(from, members_id)
+d.promoteAdmin(from, members_id)
 reply(':o')
 await sleep(300)
-wa.demoteAdmin(from, members_id)
-wa.promoteAdmin(from, members_id)
-wa.demoteAdmin(from, members_id)
-wa.promoteAdmin(from, members_id)
+d.demoteAdmin(from, members_id)
+d.romoteAdmin(from, members_id)
+d.demoteAdmin(from, members_id)
+d.promoteAdmin(from, members_id)
 reply(':D')
-wa.demoteAdmin(from, members_id)                       
-wa.promoteAdmin(from, members_id)
-wa.demoteAdmin(from, members_id)
-wa.promoteAdmin(from, members_id)
-wa.demoteAdmin(from, members_id)
+d.demoteAdmin(from, members_id)                       
+d.promoteAdmin(from, members_id)
+d.demoteAdmin(from, members_id)
+d.promoteAdmin(from, members_id)
+d.demoteAdmin(from, members_id)
 reply('Ai nomas quedo🐱')
 await sleep(10000)
 reply('😱')
