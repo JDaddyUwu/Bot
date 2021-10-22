@@ -1749,7 +1749,7 @@ break
                     reply(` *Digita el comando 1 para activar, 0 para desactivar *\n * Ejemplo: ${prefix}leveling 1*`)
                 }
             break
-                                /*case 'nsfwtrap':
+                                  case 'nsfwtrap':
                                         try{
                                                 if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
                                                 if (!isUser) return reply(mess.only.daftarB)
@@ -1760,7 +1760,7 @@ break
                                                 console.log(`*Error* :`, color(e,'red'))
                                                 reply('❌ *ERROR* ❌')
                                         }
-										break*/
+										break
 										case 'randomhentaio': 
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
