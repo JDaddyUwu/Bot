@@ -965,10 +965,10 @@ break
               await client.sendMessage(from, options, text)
                break
 case 'stickmeme2':		
-case 'smeme2':	
-if (!isUser) return reply(userB(prefix))
-  if (isBanned) return reply(banf())						
-if(!q) return reply(`✳️Responde a un sticker con el comando\n📌Ejemplo ${prefix + command} jsjs`)
+case 'smeme2':
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group) if (isBanned) return reply(banf())						
+if(!d) return reply(`✳️Responde a un sticker con el comando\n📌Ejemplo ${prefix + command} jsjs`)
 if (mek.message.extendedTextMessage != undefined || mek.message.extendedTextMessage != null) {
 ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 reply(wait())
