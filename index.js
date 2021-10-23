@@ -964,6 +964,28 @@ break
                 }
               await client.sendMessage(from, options, text)
                break
+			case 'smeme':
+if (!isUser) return reply(userB(prefix))
+  if (isBanned) return reply(banf())
+if (!isQuotedSticker) return reply(`✳️Responde a un sticker con el comando\n📌Ejemplo ${prefix + command} text|text2`)
+smeme = q
+var tex1 = smeme.split('|')[0]
+var tex2 = smeme.split('|')[1]
+if (!tex2) return reply(`✳️Responde a un sticker con el comando\n📌Ejemplo ${prefix + command} text|text2`)
+if (mek.message.extendedTextMessage != undefined || mek.message.extendedTextMessage != null) {
+ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+reply(wait())
+owgi = await Fg.downloadMediaMessage(ger)
+await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
+var imgbb = require('imgbb-uploader')
+anu = await imgbb("68cb5bee517bce4f74b0e910a5d96346", './stickmeme.jpeg')
+teks = `${anu.display_url}`
+sendStickerUrl(from, `https://pecundang.herokuapp.com/api/memegen2?teks1=${tex1}&teks2=${tex2}&img_url=${teks}`, mek)
+fs.unlinkSync('./stickmeme.jpeg')
+}
+break		
+					
+					
 			        case 'dinasty':
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
