@@ -985,7 +985,7 @@ break
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-				client.groupUpdateSubject(from, `𝐷𝑖𝑛𝑎𝑠𝑡𝑦 愛          ²⁰¹⁵`)
+				client.groupUpdateSubject(from, `𝐷𝑖𝑛𝑎𝑠𝑡𝑦 愛              ²⁰¹⁵`)
 				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
 				break 
 					
@@ -994,14 +994,16 @@ break
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 				client.groupUpdateSubject(from, `🍒Dinamica en 1 Hora🍒`)
-				break
+				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
+				break 
 
 				case 'ban':
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 				client.groupUpdateSubject(from, `🍒Ban de Putas🍒`)
-				break
+				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
+				break 
 	
 				case 'actualizar':
 				case 'update':
