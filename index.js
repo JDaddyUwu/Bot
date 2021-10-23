@@ -368,8 +368,6 @@ async function starts() {
                         const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 			
 			//......................
-const type = Object.keys(mek.message)[0]        
-const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
 			
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
@@ -383,6 +381,37 @@ const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
+			
+           //------------
+
+		module.exports = Fg = async (Fg,mek) => {
+		try {
+		if (!mek.hasNewMessage) return
+		mek = mek.messages.all()[0]
+		if (!mek.message) return
+		if (mek.key && mek.key.remoteJid == 'status@broadcast') return
+		global.blocked
+		global.prefix
+		m = simple.smsg(Fg, mek)
+		mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
+		const content = JSON.stringify(mek.message)
+		const from = mek.key.remoteJid
+		const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType    
+		const time = moment.tz('America/La_Paz').format('DD/MM HH:mm:ss')
+		const hora = moment.tz('America/La_Paz').format('HH:mm')
+		const hora2 = moment.tz('America/La_Paz').format('HH:mm:ss')
+
+		const type = Object.keys(mek.message)[0]        
+		const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
+    		//---Multi Prefix
+		if(multi){
+		var prefix = /^[°•π÷×¶∆£¢€¥®™✓=|~,¿;+×!#$%^&./\\©^]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™✓=|~zZ+×!#$,|`÷?;:%abcdefghijklmnopqrstuvwxyz%^&./\\©^]/gi) : '/'
+		} else {
+		if (nopref){
+		prefix = ' '
+		} else {
+		if(single){
+		prefix = prefa }}}
            
 //LINKS DE WHATSAPP	
 
