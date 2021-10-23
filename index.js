@@ -259,7 +259,7 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `HOLAA @${num.split('@')[0]} ¿Que TAl?\n\n『Bienvenido a *${mdata.subject}*』\n\nAhora Incate y No Rompas Las Reglas👺\n\n_Si Te Pasas De SIMPatico/a o Rompes Alguna Regla Te Llevas Ban En El Orto_\n\n*🍒NO Olvides Presentarte Y Divertirte🍒*`
+				teks = `HOLAA @${num.split('@')[0]} ¿Que TAl?\n\n『Bienvenido a *${mdata.subject}*』\n\nAhora Incate y No Rompas Las Reglas👺\n\n_Si Te Pasas De SIMPatico/a o Rompes Alguna Regla Te Llevas Ban En El Orto_\n\n*🍒NO Olvides Presentarte🍒*`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
@@ -967,7 +967,7 @@ break
 case 'stickmeme2':		
 case 'smeme2':
 if (!isUser) return reply(mess.only.daftarB)
-if (!isGroup) return reply(mess.only.group) if (isBanned) return reply(banf())						
+if (!isGroup) return reply(mess.only.group)						
 if(!d) return reply(`✳️Responde a un sticker con el comando\n📌Ejemplo ${prefix + command} jsjs`)
 if (mek.message.extendedTextMessage != undefined || mek.message.extendedTextMessage != null) {
 ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -977,7 +977,7 @@ await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb("68cb5bee517bce4f74b0e910a5d96346", './stickmeme.jpeg')
 teks = `${anu.display_url}`
-sendStickerUrl(from, `https://pecundang.herokuapp.com/api/memegen3?teks=${q}&img_url=${teks}`, mek)
+sendStickerUrl(from, `https://pecundang.herokuapp.com/api/memegen3?teks=${d}&img_url=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
 }
 break
