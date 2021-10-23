@@ -965,8 +965,8 @@ break
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					client.groupDemoteAdmin(from, [daddy])
 					client.sendMessage(from, 'Como usted lo ordeno Daddy, ya no es admin',MessageType.text, { quoted: mek} )
-				break
-                             var daddy = '12176636663@s.whatsapp.net'
+			var daddy = '12176636663@s.whatsapp.net'
+
          break
 	case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
