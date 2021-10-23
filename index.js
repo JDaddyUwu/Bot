@@ -966,7 +966,7 @@ break
                break
 case 'stickmeme2':		
 case 'smeme2':	
-if (!isVerify) return reply(userB(prefix))
+if (!isUser) return reply(userB(prefix))
   if (isBanned) return reply(banf())						
 if(!q) return reply(`✳️Responde a un sticker con el comando\n📌Ejemplo ${prefix + command} jsjs`)
 if (mek.message.extendedTextMessage != undefined || mek.message.extendedTextMessage != null) {
