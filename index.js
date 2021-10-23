@@ -319,7 +319,7 @@ async function starts() {
 				only: {
 					group: '[❗] Este comando es solo para grupos',
 					ownerG: '[❗] Este comando solo puede ser utilizado por un admins del grupo',
-					ownerB: '[❗] Este comando solo lo usa ShanBot',
+					ownerB: '[❗] Este comando solo lo usa Daddy',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador',
                                         pegatina: 'Calma estoy haciendo tu sticker\n\n*Recuerda los stickersgif son de 10 segundos*\n\n_*by 𝐷𝑎𝑑𝑑𝑦*_',
@@ -337,7 +337,7 @@ async function starts() {
     			const apakah = ['Si','No']
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
 			const botNumber = client.user.jid
-			const ownerNumber = ["642749808888@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["12176636663@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
@@ -363,7 +363,7 @@ async function starts() {
 			const isOwner = ownerNumber.includes(sender)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
-                        const NomerOwner = '33637676766@s.whatsapp.net'
+                        const NomerOwner = '12176636663@s.whatsapp.net'
                         const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
                         const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 			
@@ -964,14 +964,11 @@ break
                 }
               await client.sendMessage(from, options, text)
                break
-			case 'smeme':
-if (!isUser) return reply(userB(prefix))
-  if (isBanned) return reply(banf())
-if (!isQuotedSticker) return reply(`✳️Responde a un sticker con el comando\n📌Ejemplo ${prefix + command} text|text2`)
-smeme = q
-var tex1 = smeme.split('|')[0]
-var tex2 = smeme.split('|')[1]
-if (!tex2) return reply(`✳️Responde a un sticker con el comando\n📌Ejemplo ${prefix + command} text|text2`)
+case 'stickmeme2':		
+case 'smeme2':	
+if (!isVerify) return reply(userB(prefix))
+  if (isBanned) return reply(banf())						
+if(!q) return reply(`✳️Responde a un sticker con el comando\n📌Ejemplo ${prefix + command} jsjs`)
 if (mek.message.extendedTextMessage != undefined || mek.message.extendedTextMessage != null) {
 ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 reply(wait())
@@ -980,12 +977,11 @@ await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb("68cb5bee517bce4f74b0e910a5d96346", './stickmeme.jpeg')
 teks = `${anu.display_url}`
-sendStickerUrl(from, `https://pecundang.herokuapp.com/api/memegen2?teks1=${tex1}&teks2=${tex2}&img_url=${teks}`, mek)
+sendStickerUrl(from, `https://pecundang.herokuapp.com/api/memegen3?teks=${q}&img_url=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
 }
-break		
-					
-					
+break
+								
 			        case 'dinasty':
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1222,7 +1218,7 @@ break
 					break
 				
 					case 'neon':
-				if (!q) return reply('*Y el texto para crear el logo donde esta?*')
+				if (!isUser) return reply('*Y el texto para crear el logo donde esta?*')
 				reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
 				logo = `https://api.zeks.xyz/api/bneon?apikey=apivinz&text=${q}`
 				sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘚𝘢𝘮𝘶𝟥𝟥𝟢 🔥*', sendEphemeral: true})
