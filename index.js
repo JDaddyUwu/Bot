@@ -978,6 +978,7 @@ anu = await imgbb("68cb5bee517bce4f74b0e910a5d96346", './stickmeme.jpeg')
 teks = `${anu.display_url}`
 sendStickerUrl(from, `https://pecundang.herokuapp.com/api/memegen3?teks=${i}&img_url=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
+}
 break
 								
 			        case 'dinasty':
