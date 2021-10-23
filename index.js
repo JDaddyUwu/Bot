@@ -820,7 +820,7 @@ mentions(teks, d, true)
 } catch (e) {
 console.log(e)
 reply('Hubo un error intentalo nuevamente :/')
-}
+} 
 break	
 					
 case 'novio':
@@ -945,7 +945,29 @@ break
                 const none = fs.readFileSync('./mp3/shan.mp3');
                 break
 	
-	
+	break
+				case 'autoadm':
+				case 'autoadmin':
+				case 'dameadm':
+				case 'quieroseradmin':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? tu no eres no eres Daddy')
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					client.groupMakeAdmin(from, [satan])
+					client.sendMessage(from, 'Ahí tiene su admin Daddy',MessageType.text, { quoted: mek} )
+						
+				break
+				case 'quitameeladmin':
+				case 'autodesadm':
+				case 'autodesadmin':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? tu no eres mi jefe')
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					client.groupDemoteAdmin(from, [daddy])
+					client.sendMessage(from, 'Como usted lo ordeno Daddy, ya no es admin',MessageType.text, { quoted: mek} )
+				break
+                             var daddy = '12176636663@s.whatsapp.net'
+         break
 	case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
                 if (!isGroupAdmins) return reply(mess.only.Badmin)
