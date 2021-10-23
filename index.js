@@ -941,8 +941,7 @@ break
 	
 	case 'creador':
 	       client.sendMessage(from, {displayname: "🍒Daddy🍒", vcard: vcard}, MessageType.contact, { quoted: mek})
-		client.sendMessage(from, 'Hola, te saluda Daddy, este es un mensaje predeterminado.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\nYo soy dueño de este bot lo controlo.\nEl numero osea mi contacto de arriba no es un bot.\nBueno disfruta del bot y si quieres nos puedes seguir en instagram.\n\n*Instagram:*https://www.instagram.com/dinasty_uwu\n\n**Besos En La Cola\n\n_*by 𝐷𝑎𝑑𝑑𝑦*_',MessageType.text, { quoted: mek} )
-                const none = fs.readFileSync('./mp3/shan.mp3');
+		client.sendMessage(from, 'Hola, te saluda Daddy, este es un mensaje predeterminado.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\nYo soy dueño de este bot lo controlo.\nEl numero osea mi contacto de arriba no es un bot.\nBueno disfruta del bot y si quieres nos puedes seguir en instagram.\n\n*Instagram:*https://www.instagram.com/dinasty_uwu\n\n**Besos En La Cola\n\n_*by 𝐷𝑎𝑑𝑑𝑦*_',MessageType.text, { quoted: mek} )        
                 break
 	
 	break
@@ -965,7 +964,8 @@ break
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					client.groupDemoteAdmin(from, [daddy])
 					client.sendMessage(from, 'Como usted lo ordeno Daddy, ya no es admin',MessageType.text, { quoted: mek} )
-			var daddy = '12176636663@s.whatsapp.net'
+		                        break
+var daddy = '12176636663@s.whatsapp.net'
 
          break
 	case 'hidetag':
