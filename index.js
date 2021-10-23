@@ -943,31 +943,7 @@ break
 	       client.sendMessage(from, {displayname: "🍒Daddy🍒", vcard: vcard}, MessageType.contact, { quoted: mek})
 		client.sendMessage(from, 'Hola, te saluda Daddy, este es un mensaje predeterminado.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\nYo soy dueño de este bot lo controlo.\nEl numero osea mi contacto de arriba no es un bot.\nBueno disfruta del bot y si quieres nos puedes seguir en instagram.\n\n*Instagram:*https://www.instagram.com/dinasty_uwu\n\n**Besos En La Cola\n\n_*by 𝐷𝑎𝑑𝑑𝑦*_',MessageType.text, { quoted: mek} )        
                 break
-	
-	break
-				case 'autoadm':
-				case 'autoadmin':
-				case 'dameadm':
-				case 'quieroseradmin':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? tu no eres no eres Daddy')
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					client.groupMakeAdmin(from, [daddy])
-					client.sendMessage(from, 'Ahí tiene su admin Daddy',MessageType.text, { quoted: mek} )
-						
-				break
-				case 'quitameeladmin':
-				case 'autodesadm':
-				case 'autodesadmin':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? tu no eres Daddy')
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					client.groupDemoteAdmin(from, [daddy])
-					client.sendMessage(from, 'Como usted lo ordeno Daddy, ya no es admin',MessageType.text, { quoted: mek} )
-		                        break
-var daddy = '12176636663@s.whatsapp.net'
 
-         break
 	case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
                 if (!isGroupAdmins) return reply(mess.only.Badmin)
@@ -1000,9 +976,8 @@ await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb("68cb5bee517bce4f74b0e910a5d96346", './stickmeme.jpeg')
 teks = `${anu.display_url}`
-sendStickerUrl(from, `https://pecundang.herokuapp.com/api/memegen3?teks=${d}&img_url=${teks}`, mek)
+sendStickerUrl(from, `https://pecundang.herokuapp.com/api/memegen3?teks=${i}&img_url=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
-}
 break
 								
 			        case 'dinasty':
@@ -1019,7 +994,14 @@ break
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 				client.groupUpdateSubject(from, `🍒Dinamica en 1 Hora🍒`)
 				break
-					
+
+				case 'ban':
+				if (!isGroup) return reply(mess.only.group)
+				if (!isGroupAdmins) return reply(mess.only.admin)
+				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+				client.groupUpdateSubject(from, `🍒Ban de Putas🍒`)
+				break
+	
 				case 'actualizar':
 				case 'update':
 				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? No eres Daddy')
