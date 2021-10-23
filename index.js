@@ -1001,7 +1001,7 @@ break
 				if (!isGroup) return reply(mess.only.group)
 				if (!isGroupAdmins) return reply(mess.only.admin)
 				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-				client.groupUpdateSubject(from, `🍒Ban de Pvtas🍒`)
+				client.groupUpdateSubject(from, `🍒Ban de Putas🍒`)
 				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
 				break 
 	
