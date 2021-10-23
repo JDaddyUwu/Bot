@@ -403,15 +403,7 @@ async function starts() {
 
 		const type = Object.keys(mek.message)[0]        
 		const cmd = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
-    		//---Multi Prefix
-		if(multi){
-		var prefix = /^[°•π÷×¶∆£¢€¥®™✓=|~,¿;+×!#$%^&./\\©^]/.test(cmd) ? cmd.match(/^[°•π÷×¶∆£¢€¥®™✓=|~zZ+×!#$,|`÷?;:%abcdefghijklmnopqrstuvwxyz%^&./\\©^]/gi) : '/'
-		} else {
-		if (nopref){
-		prefix = ' '
-		} else {
-		if(single){
-		prefix = prefa }}}
+    		
            
 //LINKS DE WHATSAPP	
 
@@ -2268,6 +2260,6 @@ break
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
 		}
-	}
+	})
 }
 starts()
