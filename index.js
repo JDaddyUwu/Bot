@@ -961,7 +961,7 @@ break
 				case 'autodesadm':
 				case 'autodesadmin':
 					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? tu no eres mi jefe')
+					if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? tu no eres Daddy')
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					client.groupDemoteAdmin(from, [daddy])
 					client.sendMessage(from, 'Como usted lo ordeno Daddy, ya no es admin',MessageType.text, { quoted: mek} )
