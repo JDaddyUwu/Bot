@@ -1025,6 +1025,23 @@ break
 				})
 				break	
 					
+					case 'clone':
+					case 'clonar':
+       		 if (!isOwner) return reply(ownerB())
+		if (!isGroup) return reply(group())
+		if (args.length < 1) return reply('✳️ Menciona a quien quieres que clone su perfil 😁')
+		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Menciona a quiere quieres que clone su perfil 😁')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
+					try {
+						pp = await Fg.getProfilePicture(id)
+						buffer = await getBuffer(pp)
+						Fg.updateProfilePicture(botNumber, buffer)
+						mentions(`✅ Foto de perfil actualizada correctamente usando la foto de perfil de : @${id.split('@')[0]}`, [jid], true)
+					} catch (e) {
+						reply('❎ Lo siento ocurrio un error')
+					}
+		break
                                case 'tts':
 				   client.updatePresence(from, Presence.recording) 
 				   if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?\n\nPara saber el codigo de idioma coloque el comando ${prefix}idioma', text, {quoted: mek})
