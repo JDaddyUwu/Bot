@@ -1,11 +1,9 @@
  /*
-* Daddybot es una creación de Daddy
-* DaddyBot no tiene ningun fin de lucro
-* daddy se reserva todos los derechos de autor
-* © 2021 daddy, INC.
-
+* ShanBot es una creación de shanduy
+* ShanBot no tiene ningun fin de lucro
+* shanduy se reserva todos los derechos de autor
+* © 2021 shanduy, INC.
 Cualquier copia que utilize mi ApiKey sera dado de baja
-
 - Que hay de nuevo?
 * Nada
 */
@@ -13,6 +11,7 @@ Cualquier copia que utilize mi ApiKey sera dado de baja
 const {
     WAConnection,
     MessageType,
+    ReconnectMode,
     Presence,
     Mimetype,
     rugaapi,
@@ -36,10 +35,10 @@ const { exec } = require('child_process')
 const kagApi = require('@kagchi/kag-api')
 const axios = require("axios")
 const fetch = require('node-fetch')
-var qs = require('qs')
+/*const tiktod = require('tiktok-scraper')*/
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
-const imgbb = require('imgbb-uploader')
+/*const imgbb = require('imgbb-uploader')*/
 const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
@@ -64,6 +63,7 @@ const { menuadmin } = require('./src/menuadmin')
 const { nsfwmenu } = require('./src/nsfwmenu')
 const { desmenu } = require('./src/desmenu')
 const { version } = require('./src/version')
+const { fbDown } = require('./lib/fb.js')
 const { juegos } = require('./src/juegos')
 const { shantera } = require('./src/shantera')
 const { antimenu } = require('./src/antimenu')
@@ -78,7 +78,7 @@ const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'VERSION:3.0\n' 
             + 'FN:Daddy\n' // Nombre
             + 'ORG:Daddy;\n' // Propietario
-            + 'TEL;type=CELL;type=VOICE;waid=642749808888:+64 274 980 8888\n' // ID de WhatsApp + número de teléfono
+            + 'TEL;type=CELL;type=VOICE;waid=13399999999:++1(339) 999 9999\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
 /******FIN DE ENTRADA VCARD******/
 
@@ -104,6 +104,7 @@ const antinsta = JSON.parse(fs.readFileSync('./src/antinsta.json'))
 const antikwai = JSON.parse(fs.readFileSync('./src/antikwai.json'))
 const antiwa = JSON.parse(fs.readFileSync('./src/antiwa.json'))
 const antidiscord = JSON.parse(fs.readFileSync('./src/antidiscord.json'))
+
 
 /******FIN DE ARCHIVOS ANTILINK POR SHANDUY******/
 
